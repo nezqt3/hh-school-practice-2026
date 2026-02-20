@@ -12,10 +12,17 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   color: #333;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   font: 14px / 1.2 Arial, sans-serif;
+  display: flex;
   position: relative;
 }
 
@@ -49,6 +56,8 @@ h4 {
 }
 
 .content {
+  flex: 1;
+  margin-bottom: 30px;
   padding: 0 16px;
 }
 
@@ -270,6 +279,146 @@ h4 {
 .order__radio:checked + label {
   color: #333;
   background: #eee;
+}
+
+.footer {
+  background-color: var(--color-dark);
+}
+
+.footer__container {
+  flex-direction: column;
+  padding: 30px 15px;
+  display: flex;
+}
+
+.footer__social {
+  flex-direction: row;
+  gap: 15px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.footer__social img {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+}
+
+.footer__social img:hover {
+  opacity: .65;
+}
+
+.footer__download {
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.footer__download img {
+  cursor: pointer;
+  width: 140px;
+  height: 40px;
+}
+
+.footer__download img:hover {
+  opacity: .65;
+}
+
+.footer__logo {
+  width: 46px;
+  height: 46px;
+  display: none;
+}
+
+.footer__logo:hover {
+  opacity: .65;
+}
+
+.footer hr {
+  border-color: #666;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  color: #999;
+}
+
+@media (width >= 768px) {
+  .footer {
+    padding: 30px 35px;
+  }
+
+  .footer__top {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+  }
+}
+
+@media (width >= 1024px) {
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footer__social, .footer__download {
+    align-items: center;
+  }
+
+  .footer__logo {
+    display: block;
+  }
+}
+
+.info {
+  background: #eee;
+}
+
+.info__container {
+  flex-direction: column;
+  gap: 30px;
+  margin: 0;
+  padding: 30px 15px;
+  display: flex;
+}
+
+.info__block {
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+}
+
+.info__block p {
+  color: #333;
+}
+
+.info__block img {
+  width: 40px;
+  height: 40px;
+}
+
+@media (width >= 768px) {
+  .info__container {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 30px 35px;
+  }
+}
+
+@media (width >= 1024px) {
+  .info__container {
+    padding: 40px 0;
+  }
+
+  .info__block img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /*# sourceMappingURL=index.d2908973.css.map */
